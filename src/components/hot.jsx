@@ -15,13 +15,24 @@ class Hot extends Component {
             const option = e.target.elements.input1.value 
             var result = document.getElementById('result')
             console.log(option)
-            const randomno = Math.floor(Math.random()*100);
-            console.log(randomno)
-            var result1 =Math.abs( parseInt(option) - parseInt(randomno))
-            console.log(result1)
             if(this.state.flag===3){
                 this.setState({flag:this.state.flag=0})
             }
+            var randomno
+            if(this.state.flag===0){
+            randomno = Math.floor(Math.random()*100);
+            }
+            else if(this.state.flag===1)
+            {
+                randomno = Math.floor(Math.random()*200); 
+            }
+            else{
+                randomno = Math.floor(Math.random()*300);
+            }
+            console.log(randomno)
+            var result1 =Math.abs( parseInt(option) - parseInt(randomno))
+            console.log(result1)
+            
             this.setState({count:this.state.count=0})
             if(result1 === 0)
             {

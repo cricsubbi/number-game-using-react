@@ -53,3 +53,7 @@ body{
     margin-top: 20px;
     color: antiquewhite;
 }
+
+.btn:focus{
+  outline: none !important;
+}
